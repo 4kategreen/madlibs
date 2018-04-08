@@ -4,12 +4,12 @@
   "stories": [
     {
       "id": "disney",
-      "template": "disney.hbs",
+      "file": "disney.hbs",
       "title": "My Trip to Disney"
     },
     {
       "id": "zoo",
-      "template": "zoo.hbs",
+      "file": "zoo.hbs",
       "title": "A Day at the Zoo"
     }
   ],

@@ -1,9 +1,10 @@
 {
   "name": "madlibs",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "v1/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node v1",
+    "test": "tape v1/tests/*.js v1/tests/**/*.js"
   },
   "repository": {
     "type": "git",
