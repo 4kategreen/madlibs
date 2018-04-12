@@ -1,0 +1,13 @@
+{
+  "adjective": {
+    "message": "Enter an adjective:"
+  },
+  "adverb": {
+    "message": "Enter an adverb:"
+  },
+  "vehicle": {
+    "message": "Choose a vehicle:",
+    "type": "list",
+    "choices": ["bicycle", "airplane", "skateboard", "scooter"]
+  }
+}
