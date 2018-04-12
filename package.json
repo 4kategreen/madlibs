@@ -1,10 +1,11 @@
 {
   "name": "madlibs",
+  "description": "a nice little CLI app for playing Mad Libs",
   "version": "0.1.0",
-  "main": "v1/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node v1",
-    "test": "tape v1/tests/*.js v1/tests/**/*.js"
+    "start": "node index.js",
+    "test": "tape tests/*.js tests/**/*.js"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "disney",
+    "file": "disney.hbs",
+    "title": "My Trip to Disney"
+  },
+  {
+    "id": "zoo",
+    "file": "zoo.hbs",
+    "title": "A Day at the Zoo"
+  }
+]

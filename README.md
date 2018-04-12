@@ -1,40 +1,23 @@
 # Madlibs 
 
-## Code
+## Installing the app
 
-The app will take user input create a madlib with it.
+Clone this repo and run the following command in the root directory:
 
-### Sample game dialog
+```bash
+npm install
+```
 
-1. What do you want to tell a story about? (Choose from a list)
-1. Great! Let's get started. Enter a verb. 
-1. Enter a number
-1. Enter a city. 
-1. Last one. Enter a plural noun.
-1. Here's your story!
+## Using the app
 
-### Input possibilities
+Run the following command in the root directory:
 
-* String
-* Number
-* List
-* Multiple select list?
+```bash
+npm start
+```
 
-## Workshop Details
+To run the test suite, run this command:
 
-2 hours
-
-### Required Discussion Elements
-
-* What are unit tests?
-* Why do they help us?
-* Sample walkthrough using real world example? Maybe. Depends on knowledge of the group
-* Walk through one method of the class
-* Coding time
-
-### Required Code Elements
-
-* Class to add unit tests to
-* Feature request
-* Bug
-* Advanced coding challenge
+```bash
+npm test
+```
