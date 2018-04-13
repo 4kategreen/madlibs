@@ -16,11 +16,12 @@ test('Story.getPrompt() generates correct prompts with no config', assert => {
   const options = { template: 'hello {{name}}' };
 
   const story = new Story(options);
-  assert.equal(story.prompt.length, 1, '.getPrompt() contains one prompt');
-  assert.equal(story.prompt[0].message, 'Enter a name:', '.getPrompt().message is set with the default value');
-  assert.equal(story.prompt[0].name, '0', '.getPrompt().name is set with the default value');
-  assert.equal(story.prompt[0].type, 'input', '.getPrompt().input is set with the default value');
-  assert.equal(typeof story.prompt[0].validate, 'function', '.getPrompt().validate is set with the default value');
+  const prompts = story.getPrompt(options.template, {});
+  assert.equal(prompts.length, 1, '.getPrompt() contains one prompt');
+  assert.equal(prompts[0].message, 'Enter a name:', '.getPrompt().message is set with the default value');
+  assert.equal(prompts[0].name, '0', '.getPrompt().name is set with the default value');
+  assert.equal(prompts[0].type, 'input', '.getPrompt().input is set with the default value');
+  assert.equal(typeof prompts[0].validate, 'function', '.getPrompt().validate is set with the default value');
   assert.end();
 });
 
@@ -35,16 +36,18 @@ test('Story.getPrompt() generates correct prompts with custom config', assert =>
   };
 
   const story = new Story(options, config);
-  assert.equal(story.prompt.length, 1, '.getPrompt() contains one prompt');
-  assert.equal(story.prompt[0].name, '0', '.getPrompt().name is set with the default value');
+  const prompts = story.getPrompt(options.template, config);
+
+  assert.equal(prompts.length, 1, '.getPrompt() contains one prompt');
+  assert.equal(prompts[0].name, '0', '.getPrompt().name is set with the default value');
   assert.equal(
-    story.prompt[0].message,
+    prompts[0].message,
     'Enter a super cool, very groovy name:',
     '.getPrompt().message is set with the custom value'
   );
-  assert.equal(story.prompt[0].type, 'list', '.getPrompt().input is set with the custom value');
-  assert.ok(Array.isArray(story.prompt[0].choices), '.getPrompt().choices is set with the custom value');
-  assert.equal(story.prompt[0].type, 'list', '.getPrompt().input is set with the custom value');
-  assert.equal(typeof story.prompt[0].validate, 'function', '.getPrompt().validate is set with the default value');
+  assert.equal(prompts[0].type, 'list', '.getPrompt().input is set with the custom value');
+  assert.ok(Array.isArray(prompts[0].choices), '.getPrompt().choices is set with the custom value');
+  assert.equal(prompts[0].type, 'list', '.getPrompt().input is set with the custom value');
+  assert.equal(typeof prompts[0].validate, 'function', '.getPrompt().validate is set with the default value');
   assert.end();
 });
